@@ -1,0 +1,11 @@
+apply plugin: 'java'
+repositories { mavenCentral() }
+
+dependencies{
+	implementation project(':projects:extensions:jpanlib')
+
+	implementation group: 'org.json', name: 'json', version: '20141113'
+	implementation group: 'commons-cli', name: 'commons-cli', version: '1.2'
+	implementation group: 'junit', name: 'junit', version: '4.12'
+
+}

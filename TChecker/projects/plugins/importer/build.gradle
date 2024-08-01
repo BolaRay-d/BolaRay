@@ -1,0 +1,11 @@
+apply plugin: 'java'
+repositories { mavenCentral() }
+
+dependencies {
+	implementation group: 'org.json', name: 'json', version: '20141113'
+	implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.13'
+	implementation project(':projects:octopus')
+	implementation project(':projects:extensions:jpanlib')
+	implementation project(':projects:extensions:joern-fuzzyc')
+	implementation project(':projects:extensions:joern')
+}

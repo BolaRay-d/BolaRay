@@ -1,0 +1,7 @@
+apply plugin: 'java'
+repositories { mavenCentral() }
+
+dependencies{
+	implementation project(':projects:octopus')
+	implementation group: 'org.apache.tinkerpop', name: 'gremlin-driver', version: '3.0.1-incubating'
+}

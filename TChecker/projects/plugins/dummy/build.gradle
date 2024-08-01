@@ -1,0 +1,7 @@
+apply plugin: 'java'
+repositories { mavenCentral() }
+
+dependencies {
+	implementation project(':projects:extensions:joern')
+	implementation project(':projects:octopus')
+}
