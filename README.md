@@ -1,8 +1,15 @@
 # BolaRay
 
-BolaRay is a prototype tool for the static detection of Broken Object-Level Authorization (BOLA) vulnerabilities in PHP database-backed applications.
+BolaRay is a prototype tool developed to statically detect Broken Object-Level Authorization (BOLA) vulnerabilities in PHP database-backed applications.
 
-This tool employs a combination of SQL and static analysis to automatically infer the distinct types of object-level authorization models, and subsequently verify whether existing implementations enforce appropriate checks for these models.
+The tool combines SQL analysis with static code analysis to automatically infer and classify distinct object-level authorization models within an application. It then checks whether the application’s implementation properly enforces authorization for these models, identifying any potential vulnerabilities.
+
+•	[STUDY.csv](./STUDY.csv): Collected vulnerability data from our study.
+
+•	[appendix-hm.pdf](./appendix-hm.pdf): Detailed appendix for hierarchical models.
+
+•	[appendix-study.pdf](./appendix-study.pdf): Detailed appendix for methodology and discussion of
+study limitations.
 
 ## Step 1
 
@@ -34,5 +41,17 @@ Start the [Neo4J server](./neo4j-community-2.1.8/bin) and run the [BolaRay](./py
 
 ```bash
 ./neo4j-community-2.1.8/bin/neo4j console
-python2 ./python-joern/bolarray --dal-specifications=/path/to/dal-specifications
+python2 ./python-joern/bolaray --dal-specifications=/path/to/dal-specifications
+```
+
+## Citation
+
+```
+@inproceedings{BolaRay,
+    title       = {Detecting Broken Object-Level Authorization Vulnerabilities in Database-Backed Applications},
+    author      = {Yongheng Huang, Chenghang Shi, Jie Lu, Haofeng Li, Haining Meng and Lian Li},
+    booktitle   = {Proceedings of the 31st ACM Conference on Computer and Communications Security (CCS)},
+    month       = oct,
+    year        = 2024
+}
 ```
