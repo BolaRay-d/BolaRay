@@ -11,6 +11,12 @@ The tool combines SQL analysis with static code analysis to automatically infer 
 •	[appendix-study.pdf](./appendix-study.pdf): Detailed appendix for methodology and discussion of
 study limitations.
 
+## Artifact Evaluation Image
+
+For artifact evaluation and reproducibility, we have prepared a pre-configured Docker image that contains the required environment and dependencies for BolaRay. Researchers can directly pull this image to reproduce our experiments without manual setup.
+
+Zenodo archive: https://zenodo.org/records/13744942
+
 ## Step 1
 
 Generate the ASTs of the PHP files in the application using the tool [php2ast](./phpjoern/php2ast). This tool will output two CSV files, `nodes.csv` and `rels.csv`, representing the nodes of the generated ASTs and their relationships, respectively. In addition, directory and file nodes are also created and connected to the individual AST root nodes to reflect a scanned directory's structure and obtain a single large tree.
